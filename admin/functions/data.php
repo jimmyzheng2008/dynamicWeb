@@ -8,6 +8,22 @@ function data_setting_value ($dbc, $id){
 	return $data['value'];
 }
 
+function data_user($dbc, $id){
+	if(is_numeric($id)){
+		$q = "SELECT * FROM users WHERE id = '$id'";
+	}else{
+		$q = "SELECT * FROM users WHERE email = '$id'";
+	}
+	
+	$r = mysqli_query($dbc, $q);
+	
+	$data = mysqli_fetch_assoc($r);
+	
+	$data['fullname'] = $data['firstname']. '  ' . $data['lastname'];
+	$data['fullname_reverse'] = $data['lastname']. ', '.$data['firstname'];
+	return $data;
+}
+
 
 // get the data return with an array
 function data_page($dbc, $id){

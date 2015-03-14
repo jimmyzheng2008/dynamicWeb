@@ -1,6 +1,8 @@
 <?php
 // Setup file:
 
+error_reporting(0);
+
 include("../config/connection.php");
 
 include('./functions/data.php');
@@ -23,5 +25,8 @@ if(isset($_GET['page'])){
 
 # Page Setup
 $page = data_page($dbc, $pageid);
+
+#user Setup
+$user = data_user($dbc, $_SESSION['username']);
 
 ?>

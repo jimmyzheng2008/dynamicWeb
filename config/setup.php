@@ -17,7 +17,7 @@ if(isset($_GET['page'])){
 	$pageid = $_GET['page'];
 }else{
 	// Set $pageid equal to 1 or to Home page
-	$pageid = 1;
+	$pageid = "home";
 }
 
 # Page Setup
