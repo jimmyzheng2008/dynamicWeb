@@ -2,6 +2,7 @@
 // Setup file:
 include('./config/connection.php');
 
+include('./functions/sandbox.php');
 include('./functions/data.php');
 include('./functions/template.php');
 

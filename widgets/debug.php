@@ -4,6 +4,12 @@
 		$all_vars = get_defined_vars();	
 	?>
 	<?php //print_r($all_vars); ?>
+	
+<h1> Parse path </h1>	
+$path_info = parse_path();
+echo '<pre>'.print_r($path_info, true).'</pre>';
+
+	
 <h1>GET</h1>
 	<pre>
 		<?php print_r($_GET); ?>
